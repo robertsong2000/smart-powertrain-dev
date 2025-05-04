@@ -16,7 +16,7 @@ The panel simulates a real-time vehicle cluster with the following components:
 ### 📸 Panel Screenshot
 ![Dashboard Panel](./dashboard_screenshot.png)
 
-## 📶 Signals Simulated
+## Signals Simulated
 
 The panel is connected to a simulated CAN configuration (`.cfg`) and reads the following signals:
 
@@ -30,7 +30,7 @@ The panel is connected to a simulated CAN configuration (`.cfg`) and reads the f
 
 *(Screenshots of the signal graph and trace windows are included below.)*
 
-## 📊 Signal Graph Snapshots
+## Signal Graph Snapshots
 ![Engine_Data_Graph](./signal_graph.png)
 
 ## ⚙️ Technologies Used
@@ -40,7 +40,7 @@ The panel is connected to a simulated CAN configuration (`.cfg`) and reads the f
 - **CAPL** scripting for signal logic (if used)
 - Diagnostic Console (optional)
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 CANoeDashboard/
@@ -50,7 +50,7 @@ CANoeDashboard/
 ├── signal_graph.png
 ```
 
-## 💡 Key Learning
+## Key Learning
 
 - Design and integration of real-time vehicle dashboards
 - Signal-to-panel data mapping
