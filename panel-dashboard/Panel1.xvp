@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Panel1">
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X54be4d25ea9a1e4259e9f5fedef2759cda6a" ControlName="Picture Box 2">
+      <Property Name="Name">X54be4d25ea9a1e4259e9f5fedef2759cda6a</Property>
+      <Property Name="Size">35, 21</Property>
+      <Property Name="Location">404, 102</Property>
+      <Property Name="BorderStyle">FixedSingle</Property>
+      <Property Name="TransparentColor">Transparent</Property>
+      <Property Name="ImageFile">D:\eng_temp.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X24dc012eefeace45f2e8b4aeecd2702ecc36" ControlName="LCD Control 1">
+      <Property Name="Name">X24dc012eefeace45f2e8b4aeecd2702ecc36</Property>
+      <Property Name="Size">69, 29</Property>
+      <Property Name="Location">443, 102</Property>
+      <Property Name="BackColor">Transparent</Property>
+      <Property Name="BackgroundIsTransparent">True</Property>
+      <Property Name="ColorOff">Black</Property>
+      <Property Name="SegmentStrength">1</Property>
+      <Property Name="NumberIntDigits">3</Property>
+      <Property Name="SymbolConfiguration">8;2;CAN_FD_Powertrain;Engine;EngineData;EngTemp;1;Powertrain;;-1;;;Value;;;0</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X0182c681e9341e461ae8d12e7f65d7e5e6f5" ControlName="Analog Gauge 1">
+      <Property Name="Name">X0182c681e9341e461ae8d12e7f65d7e5e6f5</Property>
+      <Property Name="Size">251, 157</Property>
+      <Property Name="Location">300, 114</Property>
+      <Property Name="ScaleMin">0</Property>
+      <Property Name="ScaleMax">10000</Property>
+      <Property Name="LowerRangeLimit">0</Property>
+      <Property Name="UpperRangeLimit">1000</Property>
+      <Property Name="IsMinRange">False</Property>
+      <Property Name="IsMidRange">False</Property>
+      <Property Name="IsMaxRange">False</Property>
+      <Property Name="ScaleAngle">270</Property>
+      <Property Name="BackgroundColor">Transparent</Property>
+      <Property Name="ArrowWidth">2</Property>
+      <Property Name="ArrowColor">255, 0, 255, 183</Property>
+      <Property Name="CenterRadius">3</Property>
+      <Property Name="CenterColor">255, 0, 255, 183</Property>
+      <Property Name="LegendText">rpm</Property>
+      <Property Name="LegendTextColor">255, 0, 255, 183</Property>
+      <Property Name="LegendTextFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="LegendColor">LightGreen</Property>
+      <Property Name="GaugeFont">Impact, 8.25pt</Property>
+      <Property Name="TicksColor">LightGreen</Property>
+      <Property Name="CurrentPosition">0</Property>
+      <Property Name="LengthMainTicks">8</Property>
+      <Property Name="IsFrame">False</Property>
+      <Property Name="IsMargin">False</Property>
+      <Property Name="ScaleMargin">0</Property>
+      <Property Name="SymbolConfiguration">8;2;CAN_FD_Powertrain;Engine;EngineData;EngSpeed;1;Powertrain;;-1;;;Value;;;0</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXFZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTE3LjMuOTEuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBgQAAAA2VmVjdG9yLkNBTmFseXplci5QYW5lbHMuRGVzaWduLkdhdWdlQ3JpdGljYWxQcm9wZXJ0aWVzBgUAAAAyVm9pZCAuY3RvcihEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUsIERvdWJsZSkGBgAAAFAuY3RvcihTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlKQEAAAAKCw==">
+        <Argument>0</Argument>
+        <Argument>10000</Argument>
+        <Argument>0</Argument>
+        <Argument>0</Argument>
+        <Argument>1000</Argument>
+      </Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xe4e8c355ed382e4f49ea8ace577b32bf3166" ControlName="Static Text 5">
+      <Property Name="Name">Xe4e8c355ed382e4f49ea8ace577b32bf3166</Property>
+      <Property Name="Size">15, 15</Property>
+      <Property Name="Location">326, 224</Property>
+      <Property Name="ForeColor">Lime</Property>
+      <Property Name="Text">F</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xc13a9e0bec706e4a3fe847de6868b012182b" ControlName="Static Text 4">
+      <Property Name="Name">Xc13a9e0bec706e4a3fe847de6868b012182b</Property>
+      <Property Name="Size">16, 15</Property>
+      <Property Name="Location">265, 224</Property>
+      <Property Name="ForeColor">Red</Property>
+      <Property Name="Text">E</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X10796831e55dce4b61eb7b6ed433692c1738" ControlName="Static Text 3">
+      <Property Name="Name">X10796831e55dce4b61eb7b6ed433692c1738</Property>
+      <Property Name="Size">33, 15</Property>
+      <Property Name="Location">291, 68</Property>
+      <Property Name="ForeColor">LightGreen</Property>
+      <Property Name="Text">Gear</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xdd34c721e1960e42e5ea4efe6c1278d79f1b" ControlName="Static Text 1">
+      <Property Name="Name">Xdd34c721e1960e42e5ea4efe6c1278d79f1b</Property>
+      <Property Name="Size">66, 15</Property>
+      <Property Name="Location">9, 0</Property>
+      <Property Name="Text">Description</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X5691c1a6ed6a3e401de8db7e80eb15c25c7f" ControlName="GEAR">
+      <Property Name="Name">X5691c1a6ed6a3e401de8db7e80eb15c25c7f</Property>
+      <Property Name="Size">51, 50</Property>
+      <Property Name="Location">281, 89</Property>
+      <Property Name="BackColor">Transparent</Property>
+      <Property Name="BackgroundIsTransparent">True</Property>
+      <Property Name="ColorOff">255, 31, 48, 42</Property>
+      <Property Name="ColorOn">255, 0, 255, 182</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="NumberIntDigits">1</Property>
+      <Property Name="SymbolConfiguration">8;2;CAN_FD_Powertrain;Engine;GearBoxInfo;Gear;1;Powertrain;;-1;;;Value;;;0</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X3f21a914e6095e4796e96f1ee808f725669a" ControlName="Picture Box 1">
+      <Property Name="Name">X3f21a914e6095e4796e96f1ee808f725669a</Property>
+      <Property Name="Size">44, 26</Property>
+      <Property Name="Location">288, 145</Property>
+      <Property Name="ImageFile">..\..\..\..\..\..\..\soori\Downloads\LOGO.png</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StartStopControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xafcff464ea263e4c35e95c2e282507e1baa2" ControlName="Start Stop Control 1">
+      <Property Name="Name">Xafcff464ea263e4c35e95c2e282507e1baa2</Property>
+      <Property Name="Size">72, 36</Property>
+      <Property Name="Location">3, 291</Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xda29d27ee98c3e4cf8ea8b9e39f2981bc405" ControlName="Fuel Gauge">
+      <Property Name="Name">Xda29d27ee98c3e4cf8ea8b9e39f2981bc405</Property>
+      <Property Name="Size">93, 74</Property>
+      <Property Name="Location">254, 187</Property>
+      <Property Name="ScaleMin">0</Property>
+      <Property Name="ScaleMax">255</Property>
+      <Property Name="LowerRangeLimit">0</Property>
+      <Property Name="UpperRangeLimit">100</Property>
+      <Property Name="MinColor">Red</Property>
+      <Property Name="MidColor">LightGreen</Property>
+      <Property Name="MaxColor">LightGreen</Property>
+      <Property Name="BorderStyle">FixedSingle</Property>
+      <Property Name="BackgroundColor">Transparent</Property>
+      <Property Name="ArrowWidth">2</Property>
+      <Property Name="ArrowColor">255, 0, 255, 183</Property>
+      <Property Name="CenterRadius">2</Property>
+      <Property Name="CenterColor">255, 0, 255, 183</Property>
+      <Property Name="LegendText">l</Property>
+      <Property Name="LegendTextColor">White</Property>
+      <Property Name="LegendTextFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="IsLegendText">False</Property>
+      <Property Name="LegendColor">LightGreen</Property>
+      <Property Name="IsLegendValue">False</Property>
+      <Property Name="MainTicksNumber">1</Property>
+      <Property Name="TicksColor">LightGreen</Property>
+      <Property Name="CurrentPosition">0</Property>
+      <Property Name="LengthMainTicks">6</Property>
+      <Property Name="IsFrame">False</Property>
+      <Property Name="IsMargin">False</Property>
+      <Property Name="ScaleMargin">0</Property>
+      <Property Name="SymbolConfiguration">8;2;CAN_FD_Powertrain;Engine;EngineData;PetrolLevel;1;Powertrain;;-1;;;Value;;;0</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXFZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTE3LjMuOTEuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBgQAAAA2VmVjdG9yLkNBTmFseXplci5QYW5lbHMuRGVzaWduLkdhdWdlQ3JpdGljYWxQcm9wZXJ0aWVzBgUAAAAyVm9pZCAuY3RvcihEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUsIERvdWJsZSkGBgAAAFAuY3RvcihTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlKQEAAAAKCw==">
+        <Argument>0</Argument>
+        <Argument>255</Argument>
+        <Argument>0</Argument>
+        <Argument>0</Argument>
+        <Argument>100</Argument>
+      </Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X2210cc9ce7dfae4049eb3cceb8e6b86a7a2e" ControlName="SPEEDOMETER">
+      <Property Name="Name">X2210cc9ce7dfae4049eb3cceb8e6b86a7a2e</Property>
+      <Property Name="Size">297, 199</Property>
+      <Property Name="Location">9, 57</Property>
+      <Property Name="ScaleMin">0</Property>
+      <Property Name="ScaleMax">300</Property>
+      <Property Name="LowerRangeLimit">0</Property>
+      <Property Name="UpperRangeLimit">300</Property>
+      <Property Name="IsMinRange">False</Property>
+      <Property Name="IsMidRange">False</Property>
+      <Property Name="IsMaxRange">False</Property>
+      <Property Name="ScaleAngle">270</Property>
+      <Property Name="BackgroundColor">Transparent</Property>
+      <Property Name="ArrowWidth">2</Property>
+      <Property Name="ArrowColor">255, 0, 255, 183</Property>
+      <Property Name="CenterRadius">3</Property>
+      <Property Name="CenterColor">255, 0, 255, 183</Property>
+      <Property Name="LegendText">mph</Property>
+      <Property Name="LegendTextColor">255, 0, 255, 183</Property>
+      <Property Name="LegendTextFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="LegendColor">LightGreen</Property>
+      <Property Name="GaugeFont">Impact, 8.25pt</Property>
+      <Property Name="MainTicksNumber">15</Property>
+      <Property Name="TicksColor">LightGreen</Property>
+      <Property Name="CurrentPosition">0</Property>
+      <Property Name="LengthMainTicks">11</Property>
+      <Property Name="IsFrame">False</Property>
+      <Property Name="IsMargin">False</Property>
+      <Property Name="ScaleMargin">0</Property>
+      <Property Name="SymbolConfiguration">8;2;CAN_FD_Powertrain;Engine;ABSdata;CarSpeed;1;Powertrain;;-1;;;Value;;;0</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXFZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTE3LjMuOTEuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBgQAAAA2VmVjdG9yLkNBTmFseXplci5QYW5lbHMuRGVzaWduLkdhdWdlQ3JpdGljYWxQcm9wZXJ0aWVzBgUAAAAyVm9pZCAuY3RvcihEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUsIERvdWJsZSkGBgAAAFAuY3RvcihTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlKQEAAAAKCw==">
+        <Argument>0</Argument>
+        <Argument>300</Argument>
+        <Argument>0</Argument>
+        <Argument>0</Argument>
+        <Argument>300</Argument>
+      </Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">659, 332</Property>
+    <Property Name="Location">0, 0</Property>
+    <Property Name="BackColor">255, 12, 12, 12</Property>
+  </Object>
+</Panel>
