@@ -11,7 +11,7 @@ The panel simulates a real-time vehicle cluster with the following components:
 - **Gear Indicator** (0–6)
 - **Fuel Gauge** (E to F)
 - **Engine Warning Icon**
-- **Driver Tag Display** ( branding)
+- **Driver Tag Display** (branding)
 
 ### 📸 Panel Screenshot
 ![Dashboard Panel](./dashboard_screenshot.png)
