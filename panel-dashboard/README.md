@@ -37,8 +37,8 @@ The panel is connected to a simulated CAN configuration (`.cfg`) and reads the f
 
 - Vector **CANoe /pro DE**
 - **Panel Designer** with custom indicators
-- **CAPL** scripting for signal logic (if used)
-- Diagnostic Console (optional)
+- **CAPL** scripting for signal logic
+- Diagnostic Console
 
 ## Folder Structure
 
