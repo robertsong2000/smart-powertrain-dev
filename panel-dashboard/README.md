@@ -31,11 +31,7 @@ The panel is connected to a simulated CAN configuration (`.cfg`) and reads the f
 *(Screenshots of the signal graph and trace windows are included below.)*
 
 ## 📊 Signal Graph Snapshots
-
-Include signal trends showing:
-- Gear change transitions
-- Speed and RPM ramp-up
-- Fuel drain simulation
+![Engine_Data_Graph](./signal_graph.png)
 
 ## ⚙️ Technologies Used
 
@@ -48,11 +44,10 @@ Include signal trends showing:
 
 ```
 CANoeDashboard/
-├── PanelConfig.cfg        # CANoe configuration file
+├── Panel.XVP              # CANoe configuration file
 ├── README.md              # Documentation
 ├── dashboard_screenshot.png
 ├── signal_graph.png
-└── signal_list.png
 ```
 
 ## 💡 Key Learning
