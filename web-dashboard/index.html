@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能动力总成仪表盘 - Web版</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- 标题栏 -->
+        <div class="header">
+            <h1>智能动力总成仪表盘</h1>
+            <div class="status-indicator">
+                <span class="status-dot" id="connectionStatus"></span>
+                <span>实时数据</span>
+            </div>
+        </div>
+
+        <!-- 主仪表盘区域 -->
+        <div class="main-dashboard">
+            <!-- 速度表 -->
+            <div class="gauge-container speedometer">
+                <div class="gauge-title">速度 (mph)</div>
+                <div class="gauge" id="speedGauge">
+                    <svg viewBox="0 0 200 200" class="gauge-svg">
+                        <!-- 背景圆弧 -->
+                        <path d="M 30 170 A 70 70 0 1 1 170 170" 
+                              fill="none" 
+                              stroke="#333" 
+                              stroke-width="8"/>
+                        <!-- 刻度线 -->
+                        <g class="gauge-ticks" id="speedTicks"></g>
+                        <!-- 数值标签 -->
+                        <g class="gauge-labels" id="speedLabels"></g>
+                        <!-- 指针 -->
+                        <line x1="100" y1="100" x2="100" y2="40" 
+                              stroke="#00ff88" 
+                              stroke-width="3" 
+                              stroke-linecap="round"
+                              class="gauge-needle" 
+                              id="speedNeedle"/>
+                        <!-- 中心点 -->
+                        <circle cx="100" cy="100" r="5" fill="#00ff88"/>
+                    </svg>
+                    <div class="gauge-value" id="speedValue">0</div>
+                </div>
+            </div>
+
+            <!-- 转速表 -->
+            <div class="gauge-container tachometer">
+                <div class="gauge-title">转速 (rpm)</div>
+                <div class="gauge" id="rpmGauge">
+                    <svg viewBox="0 0 200 200" class="gauge-svg">
+                        <!-- 背景圆弧 -->
+                        <path d="M 30 170 A 70 70 0 1 1 170 170" 
+                              fill="none" 
+                              stroke="#333" 
+                              stroke-width="8"/>
+                        <!-- 红线区域 -->
+                        <path d="M 150 60 A 70 70 0 0 1 170 170" 
+                              fill="none" 
+                              stroke="#ff4444" 
+                              stroke-width="8"/>
+                        <!-- 刻度线 -->
+                        <g class="gauge-ticks" id="rpmTicks"></g>
+                        <!-- 数值标签 -->
+                        <g class="gauge-labels" id="rpmLabels"></g>
+                        <!-- 指针 -->
+                        <line x1="100" y1="100" x2="100" y2="40" 
+                              stroke="#00ffbb" 
+                              stroke-width="3" 
+                              stroke-linecap="round"
+                              class="gauge-needle" 
+                              id="rpmNeedle"/>
+                        <!-- 中心点 -->
+                        <circle cx="100" cy="100" r="5" fill="#00ffbb"/>
+                    </svg>
+                    <div class="gauge-value" id="rpmValue">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 辅助仪表区域 -->
+        <div class="secondary-dashboard">
+            <!-- 档位显示 -->
+            <div class="info-panel gear-panel">
+                <div class="panel-title">档位</div>
+                <div class="gear-display" id="gearDisplay">P</div>
+            </div>
+
+            <!-- 燃油表 -->
+            <div class="info-panel fuel-panel">
+                <div class="panel-title">燃油</div>
+                <div class="fuel-gauge">
+                    <div class="fuel-bar">
+                        <div class="fuel-level" id="fuelLevel"></div>
+                    </div>
+                    <div class="fuel-labels">
+                        <span class="fuel-empty">E</span>
+                        <span class="fuel-full">F</span>
+                    </div>
+                    <div class="fuel-percentage" id="fuelPercentage">100%</div>
+                </div>
+            </div>
+
+            <!-- 发动机温度 -->
+            <div class="info-panel temp-panel">
+                <div class="panel-title">发动机温度</div>
+                <div class="temp-display">
+                    <div class="temp-icon" id="tempIcon">🌡️</div>
+                    <div class="temp-value" id="tempValue">85°C</div>
+                    <div class="temp-status" id="tempStatus">正常</div>
+                </div>
+            </div>
+
+            <!-- 警告指示灯 -->
+            <div class="info-panel warning-panel">
+                <div class="panel-title">系统状态</div>
+                <div class="warning-lights">
+                    <div class="warning-light" id="engineWarning">
+                        <span class="warning-icon">⚠️</span>
+                        <span class="warning-text">发动机</span>
+                    </div>
+                    <div class="warning-light" id="oilWarning">
+                        <span class="warning-icon">🛢️</span>
+                        <span class="warning-text">机油</span>
+                    </div>
+                    <div class="warning-light" id="batteryWarning">
+                        <span class="warning-icon">🔋</span>
+                        <span class="warning-text">电池</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <button class="control-btn" id="startStopBtn">启动/停止</button>
+            <button class="control-btn" id="resetBtn">重置</button>
+            <div class="simulation-controls">
+                <label>模拟模式:</label>
+                <select id="simulationMode">
+                    <option value="idle">怠速</option>
+                    <option value="city">城市驾驶</option>
+                    <option value="highway">高速驾驶</option>
+                    <option value="sport">运动模式</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 数据显示面板 -->
+        <div class="data-panel">
+            <div class="data-item">
+                <span class="data-label">里程:</span>
+                <span class="data-value" id="odometer">12,345 km</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">平均油耗:</span>
+                <span class="data-value" id="fuelConsumption">7.2 L/100km</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">行驶时间:</span>
+                <span class="data-value" id="drivingTime">00:00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

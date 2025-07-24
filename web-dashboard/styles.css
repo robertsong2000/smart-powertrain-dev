@@ -1,0 +1,400 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+    color: #00ff88;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto auto;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+/* 标题栏 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px #00ff88;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* 主仪表盘区域 */
+.main-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.gauge-container {
+    background: rgba(0, 255, 136, 0.05);
+    border: 2px solid #00ff88;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+
+.gauge-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gauge {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.gauge-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.gauge-needle {
+    transform-origin: 100px 100px;
+    transition: transform 0.5s ease-out;
+}
+
+.gauge-value {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px currentColor;
+}
+
+/* 刻度线和标签样式 */
+.gauge-ticks line {
+    stroke: #00ff88;
+    stroke-width: 2;
+}
+
+.gauge-labels text {
+    fill: #00ff88;
+    font-family: 'Orbitron', monospace;
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+/* 辅助仪表区域 */
+.secondary-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-panel {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.panel-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00ffbb;
+}
+
+/* 档位显示 */
+.gear-display {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #00ff88;
+    text-shadow: 0 0 20px #00ff88;
+    line-height: 1;
+}
+
+/* 燃油表 */
+.fuel-gauge {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fuel-bar {
+    width: 100%;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #00ff88;
+}
+
+.fuel-level {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4444 0%, #ffaa00 50%, #00ff88 100%);
+    width: 75%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+.fuel-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.fuel-empty {
+    color: #ff4444;
+}
+
+.fuel-full {
+    color: #00ff88;
+}
+
+.fuel-percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+/* 温度显示 */
+.temp-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.temp-icon {
+    font-size: 2rem;
+}
+
+.temp-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.temp-status {
+    font-size: 0.9rem;
+    color: #00ffbb;
+}
+
+/* 警告指示灯 */
+.warning-lights {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.warning-light {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.warning-light.active {
+    background: rgba(255, 68, 68, 0.2);
+    border: 1px solid #ff4444;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.warning-icon {
+    font-size: 1.2rem;
+}
+
+.warning-text {
+    font-size: 0.9rem;
+}
+
+/* 控制面板 */
+.control-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.control-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid #00ff88;
+    color: #00ff88;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.control-btn:hover {
+    background: #00ff88;
+    color: #000;
+    box-shadow: 0 0 20px #00ff88;
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.simulation-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.simulation-controls label {
+    font-weight: 700;
+    color: #00ffbb;
+}
+
+.simulation-controls select {
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    font-family: 'Orbitron', monospace;
+    border-radius: 5px;
+}
+
+/* 数据显示面板 */
+.data-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.data-label {
+    font-weight: 700;
+    color: #00ffbb;
+}
+
+.data-value {
+    font-weight: 700;
+    color: #00ff88;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .gauge {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .control-panel {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .simulation-controls {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+    
+    .gauge {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .gear-display {
+        font-size: 3rem;
+    }
+    
+    .temp-value {
+        font-size: 1.5rem;
+    }
+}
